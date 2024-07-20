@@ -1,0 +1,59 @@
+/*
+ * Copyright 2021 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+syntax = "proto3";
+
+option java_package = "com.samples.appinstaller";
+option java_multiple_files = true;
+
+message AppSettings {
+
+  enum AutoUpdateSchedule {
+    MANUAL = 0;
+    EVERY_15_MINUTES = 1;
+    EVERY_30_MINUTES = 2;
+    EVERY_60_MINUTES = 3;
+  }
+
+  enum UpdateAvailabilityPeriod {
+    NONE = 0;
+    AFTER_30_SECONDS = 1;
+    AFTER_5_MINUTES = 2;
+    AFTER_15_MINUTES = 3;
+    AFTER_30_MINUTES = 4;
+    AFTER_60_MINUTES = 5;
+  }
+
+  enum PackageActionType {
+    INSTALLING = 0;
+    UNINSTALLING = 1;
+    UPGRADING = 2;
+    PENDING_USER_INSTALLING = 3;
+    PENDING_USER_UNINSTALLING = 4;
+    PENDING_USER_UPGRADING = 5;
+  }
+
+  message PackageAction {
+    string packageName = 1;
+    int32 sessionId = 2;
+    PackageActionType packageActionType = 3;
+    int64 creationTime = 4;
+  }
+
+  AutoUpdateSchedule autoUpdateSchedule = 1;
+  UpdateAvailabilityPeriod updateAvailabilityPeriod = 2;
+  map<string, PackageAction> packageActions = 3;
+}

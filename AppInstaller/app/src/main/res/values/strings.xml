@@ -1,0 +1,63 @@
+<!--
+  ~ Copyright 2021 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources>
+    <string name="app_name">App Installer</string>
+
+    <!-- Permission screen -->
+    <string name="authorization_dialog_title">Authorization</string>
+    <string name="authorization_dialog_description">App Installer needs this special permission to be install other apps</string>
+    <string name="authorization_dialog_confirm_label">OK</string>
+    <string name="authorization_dialog_learn_more_label">Learn More</string>
+
+    <!-- Store screen -->
+    <string name="install_time_label">Installed %1$s</string>
+    <string name="not_installed_label">Not installed</string>
+    <string name="install_label">Install</string>
+    <string name="cancel_label">Cancel</string>
+    <string name="installing_label">Installing</string>
+    <string name="uninstalling_label">Uninstalling</string>
+    <string name="uninstall_label">Uninstall</string>
+    <string name="open_label">Open</string>
+    <string name="upgrade_label">Upgrade</string>
+    <string name="upgrading_label">Upgrading</string>
+    <string name="refresh_library">Refresh library</string>
+
+    <!-- Notifications -->
+    <string name="install_channel_name">Installs &amp; updates</string>
+    <string name="install_notification_title">Finish installing apps</string>
+    <string name="install_notification_description">Tap to continue</string>
+
+    <!-- Settings screen -->
+    <string name="auto_update_title">Auto-update Settings</string>
+    <string name="autoupdate_settings_description">DemoStore will update (or not) automatically apps it has installed based on these settings</string>
+    <string name="auto_update_schedule_label">Auto-update Schedule</string>
+    <string name="update_availability_period_label">Time between install and update availability</string>
+    <string-array name="auto_update_schedule">
+        <item>Don\'t auto-update apps</item>
+        <item>Check and update 15 minutes</item>
+        <item>Check and update 30 minutes</item>
+        <item>Check and update 60 minutes</item>
+    </string-array>
+    <string-array name="update_availability_period">
+        <item>No updates</item>
+        <item>After 30 seconds</item>
+        <item>After 5 minutes</item>
+        <item>After 15 minutes</item>
+        <item>After 30 minutes</item>
+        <item>After 60 minutes</item>
+    </string-array>
+</resources>
