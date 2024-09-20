@@ -14,3 +14,12 @@ sample should guide your implementation.
 
 This sample demonstrates how to store and access data in a device protected
 storage that is always available while the device is booted.
+
+## ProGurad
+
+```pro
+# Protobuf
+-keepclassmembers class * extends com.google.protobuf.GeneratedMessageLite {
+  <fields>;
+}
+```
